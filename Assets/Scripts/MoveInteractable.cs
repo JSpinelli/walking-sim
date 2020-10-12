@@ -13,6 +13,7 @@ public class MoveInteractable : Interactable
         {
             gameObject.transform.RotateAround(Pivot.transform.position, Vector3.up, 90);
             activated = true;
+            Debug.Log("open");
         }else{
             if (isReseatable){
                 gameObject.transform.RotateAround(Pivot.transform.position, Vector3.up, -90);
