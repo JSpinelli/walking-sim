@@ -11,9 +11,9 @@ abstract public class Interactable : MonoBehaviour {
     private bool isColliding = false;
     protected bool wasActivated = false;
 
-    private string location;
+    protected string location;
 
-    public NarratorPace narrator;
+    protected NarratorPace narrator;
 
     private void Awake () {
         Transform t = this.transform;
