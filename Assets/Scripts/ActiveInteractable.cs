@@ -10,7 +10,7 @@ public class ActiveInteractable : Interactable {
         if (!wasActivated) {
             objectToModify.SetActive (setActive);
             wasActivated = true;
-            narrator.notifyComplete (location, "activable", "" + this.GetInstanceID ());
+            narrator.notifyComplete (location.ToArray ().ToString(), type, "" + this.GetInstanceID ());
         }
     }
 }

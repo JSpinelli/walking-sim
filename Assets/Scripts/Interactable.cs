@@ -11,7 +11,9 @@ abstract public class Interactable : MonoBehaviour {
     private bool isColliding = false;
     protected bool wasActivated = false;
 
-    protected string location;
+    public int id;
+    public List<string> location = new List<string> ();
+    public string type = "activable";
 
     protected NarratorPace narrator;
 
@@ -20,13 +22,14 @@ abstract public class Interactable : MonoBehaviour {
         while (t.parent != null) {
             //Debug.Log(t.parent);
             if (t.parent.tag == "Location") {
-                
-                location = t.parent.name;
-                narrator = GameObject.Find ("Narrator").GetComponent<NarratorPace> ();
-                narrator.Register ( location, "activable", ""+this.GetInstanceID());
+
+                location.Insert (0, t.parent.name);
             }
             t = t.parent.transform;
         }
+        narrator = GameObject.Find ("Narrator").GetComponent<NarratorPace> ();
+        id = this.GetInstanceID ();
+        narrator.Register (this);
         return; // Could not find a parent with given tag.
     }
 

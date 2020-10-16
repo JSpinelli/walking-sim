@@ -63,6 +63,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   promptCollider: {fileID: 8089178585007656794}
   keyPrompt: {fileID: 8155120231143713977}
+  id: 0
+  location: []
+  type: water
   objectToModify: {fileID: 6614223564689391904}
   setActive: 1
 --- !u!1 &2648505284981736850
