@@ -65,7 +65,10 @@ MonoBehaviour:
   keyPrompt: {fileID: 8155120231143713977}
   id: 0
   location: []
-  type: water
+  type: glass
+  prompt: Fill ${amount} glasses with water in ${location}
+  category: amount
+  active: 0
   objectToModify: {fileID: 6614223564689391904}
   setActive: 1
 --- !u!1 &2648505284981736850

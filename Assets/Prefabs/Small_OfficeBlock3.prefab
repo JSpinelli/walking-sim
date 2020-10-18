@@ -1710,6 +1710,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6149052476171475617}
+  - component: {fileID: 6792509383579613503}
   m_Layer: 0
   m_Name: Cubicle 2
   m_TagString: Location
@@ -1732,6 +1733,21 @@ Transform:
   m_Father: {fileID: 3138430273342951463}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6792509383579613503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6503096749671612936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4b14e381d7494d429a81c104f9c8eda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Cubicle 2
+  visited: 0
+  position: {fileID: 6149052476171475617}
 --- !u!1 &8370983390549866870
 GameObject:
   m_ObjectHideFlags: 0
@@ -1741,6 +1757,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5023299191956258113}
+  - component: {fileID: 6923498757713381432}
   m_Layer: 0
   m_Name: Cubicle 1
   m_TagString: Location
@@ -1763,6 +1780,21 @@ Transform:
   m_Father: {fileID: 3138430273342951463}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6923498757713381432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8370983390549866870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4b14e381d7494d429a81c104f9c8eda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Cubicle 1
+  visited: 0
+  position: {fileID: 5023299191956258113}
 --- !u!1001 &5403263076210904655
 PrefabInstance:
   m_ObjectHideFlags: 0
