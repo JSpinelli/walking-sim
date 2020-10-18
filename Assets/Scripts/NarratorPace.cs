@@ -8,16 +8,21 @@ public class NarratorPace : MonoBehaviour
 
     public GameObject objectivesUI;
     public TextMeshProUGUI currentObjective;
+    public TextMeshProUGUI timer;
 
     public GameObject narratorPrompter;
     public TextMeshProUGUI currentDialog;
+
+    public float timerMinutes;
+    private bool timerStarted;
+    private float timeRemaining;
     private int currentCount = 0;
     private int objectiveCount = 2;
     private List<Interactable> interactableRepo = new List<Interactable>();
     private List<Location> mainLocations = new List<Location>();
+    private List<TaskType> taskTypes = new List<TaskType>();
     private Dictionary<string, List<Interactable>> interactableRepoByType = new Dictionary<string, List<Interactable>>();
     private Dictionary<string, Dictionary<string, List<Interactable>>> interactableByLocation = new Dictionary<string, Dictionary<string, List<Interactable>>>();
-
     private int currentTaskId;
     private string currentLocationTask;
 
@@ -42,7 +47,7 @@ public class NarratorPace : MonoBehaviour
     };
 
     private string[] incompleteTaskDialog = {
-        "Ohhh, a defiant player. You know that this was also expected right?",
+        "Ohhh, a defiant player. You know that this was also expected right? Here, we can try again",
         "I can literally keep giving you tasks all day",
         "Watch out! Another task is coming your way",
         "If you are expecting another witty response you are out of luck. This is a student project. Limited time and all that"
@@ -66,21 +71,89 @@ public class NarratorPace : MonoBehaviour
         this.findObjective();
     }
 
+    // Update is called once per frame
+    void Update()
+    {
+        if (timerStarted)
+        {
+            if (timeRemaining > 0)
+            {
+                timeRemaining -= Time.deltaTime;
+                this.DisplayTime(timeRemaining);
+            }
+            else
+            {
+                Debug.Log("Time has run out!");
+
+                timeRemaining = 0;
+                this.DisplayTime(timeRemaining);
+                timerStarted = false;
+                this.taskFailed();
+            }
+        }
+    }
+
+    private void startTimer()
+    {
+        timerStarted = true;
+        timeRemaining = timerMinutes * 60;
+        this.DisplayTime(timeRemaining);
+    }
+
     private void findObjective()
     {
         Dictionary<string, List<Interactable>> typeIterator;
         List<Interactable> activityIterator;
         var newLocation = mainLocations.Find(x => !x.visited);
-        newLocation.visited = true;
-        interactableByLocation.TryGetValue(newLocation.name, out typeIterator);
-        typeIterator.TryGetValue("glass", out activityIterator);
+        if (newLocation)
+        {
+            newLocation.visited = true;
+            interactableByLocation.TryGetValue(newLocation.name, out typeIterator);
+        }
+        else
+        {
+            newLocation = mainLocations[Random.Range(0, mainLocations.Count)];
+            interactableByLocation.TryGetValue(newLocation.name, out typeIterator);
+        }
+        var taskTypesNotPerfomed = taskTypes.FindAll(x => !x.performed);
+        var i = 0;
+        while (i < taskTypesNotPerfomed.Count && !typeIterator.ContainsKey(taskTypesNotPerfomed[i].name))
+        {
+            i++;
+        }
+        if (i < taskTypesNotPerfomed.Count)
+        {
+            taskTypesNotPerfomed[i].performed = true;
+            typeIterator.TryGetValue(taskTypesNotPerfomed[i].name, out activityIterator);
+        }
+        else
+        {
+            var j = 0;
+            while (j < taskTypes.Count && !typeIterator.ContainsKey(taskTypes[i].name))
+            {
+                j++;
+            }
+            typeIterator.TryGetValue(taskTypes[j].name, out activityIterator);
+        }
+
         this.makeObjective(activityIterator);
+        this.startTimer();
+    }
+
+    private void DisplayTime(float timeToDisplay)
+    {
+        float minutes = Mathf.FloorToInt(timeToDisplay / 60);
+        float seconds = Mathf.FloorToInt(timeToDisplay % 60);
+
+        timer.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
 
 
     private void taskComplete()
     {
+        timerStarted = false;
+        this.DisplayTime(0);
         taskCompletedCounter++;
         narratorPrompter.SetActive(true);
         currentDialog.text = completeTaskDialog[completeTaskDialogCounter];
@@ -91,7 +164,12 @@ public class NarratorPace : MonoBehaviour
     private void taskFailed()
     {
         taskFailedCounter++;
+        narratorPrompter.SetActive(true);
+        currentDialog.text = incompleteTaskDialog[incompleteTaskDialogCounter];
+        incompleteTaskDialogCounter++;
+        this.findObjective();
     }
+
 
     private void makeObjective(List<Interactable> activities)
     {
@@ -116,12 +194,6 @@ public class NarratorPace : MonoBehaviour
             case "interact":
                 break;
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     public void notifyComplete(Interactable subscriber)
@@ -153,6 +225,7 @@ public class NarratorPace : MonoBehaviour
     {
         if (!interactableRepoByType.ContainsKey(subscriber.type))
         {
+            taskTypes.Add(new TaskType(subscriber.type));
             var list = new List<Interactable>();
             list.Add(subscriber);
             interactableRepoByType.Add(subscriber.type, list);
@@ -167,7 +240,7 @@ public class NarratorPace : MonoBehaviour
         //Find if location already exists on Dictionary
         if (!interactableByLocation.ContainsKey(subscriber.location[0].name))
         {
-            Debug.Log("Creating entry for location: " + subscriber.location[0].name);
+            //Debug.Log("Creating entry for location: " + subscriber.location[0].name);
             mainLocations.Add(subscriber.location[0]); // TO-DO check for starting location and secondary location (those should be treated as visited)
             //If it doesnt exist create it
             var location = new Dictionary<string, List<Interactable>>();
@@ -176,7 +249,7 @@ public class NarratorPace : MonoBehaviour
             // Add current (first to be added)
             list.Add(subscriber);
             // Add List with it's location to the new Dictionary Entry
-            Debug.Log("Creating entry for type: " + subscriber.type);
+            //Debug.Log("Creating entry for type: " + subscriber.type);
             location.Add(subscriber.type, list);
             interactableByLocation.Add(subscriber.location[0].name, location);
         }
@@ -188,7 +261,7 @@ public class NarratorPace : MonoBehaviour
             //Find if type already exsits on sub-Dictionary
             if (!location.ContainsKey(subscriber.type))
             {
-                Debug.Log("Creating entry for type: " + subscriber.type);
+                //Debug.Log("Creating entry for type: " + subscriber.type);
                 //If it doesnt create list
                 var list = new List<Interactable>();
                 // Add current (first to be added)
