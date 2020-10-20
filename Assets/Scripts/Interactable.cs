@@ -11,7 +11,13 @@ abstract public class Interactable : MonoBehaviour {
     private bool isColliding = false;
     protected bool wasActivated = false;
 
-    protected string location;
+    public int id;
+    public List<Location> location = new List<Location> ();
+    public string type = "activable";
+    public string prompt = "Fill ${amount} glasses with water in ${location}";
+    public string category = "amount";
+
+    public bool active = false;
 
     protected NarratorPace narrator;
 
@@ -20,24 +26,25 @@ abstract public class Interactable : MonoBehaviour {
         while (t.parent != null) {
             //Debug.Log(t.parent);
             if (t.parent.tag == "Location") {
-                
-                location = t.parent.name;
-                narrator = GameObject.Find ("Narrator").GetComponent<NarratorPace> ();
-                narrator.Register ( location, "activable", ""+this.GetInstanceID());
+
+                location.Insert (0, t.parent.GetComponent<Location> ());
             }
             t = t.parent.transform;
         }
+        narrator = GameObject.Find ("Narrator").GetComponent<NarratorPace> ();
+        id = this.GetInstanceID ();
+        narrator.Register (this);
         return; // Could not find a parent with given tag.
     }
 
     private void OnTriggerEnter (Collider other) {
-        if (isColliding) return;
+        if (isColliding && active) return;
         isColliding = true;
         keyPrompt.SetActive (true);
     }
 
     private void OnTriggerExit (Collider other) {
-        if (!isColliding) return;
+        if (!isColliding && active) return;
         isColliding = false;
         keyPrompt.SetActive (false);
     }

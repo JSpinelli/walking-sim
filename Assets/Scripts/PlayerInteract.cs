@@ -5,9 +5,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerInteract : MonoBehaviour
 {
-    private bool isColliding = false;
     public float interactDistance;
-    private bool wasActivated = false;
 
     public void OnInteract(InputAction.CallbackContext ctx)
     {

@@ -47,8 +47,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.6499863, y: 1, z: 2.0901413}
-  m_Center: {x: 0.10406399, y: 0, z: 0.04411125}
+  m_Size: {x: 0.2, y: 0.2, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &7829118493038538976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63,6 +63,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   promptCollider: {fileID: 8089178585007656794}
   keyPrompt: {fileID: 8155120231143713977}
+  id: 0
+  location: []
+  type: glass
+  prompt: Fill ${amount} glasses with water in ${location}
+  category: amount
+  active: 0
   objectToModify: {fileID: 6614223564689391904}
   setActive: 1
 --- !u!1 &2648505284981736850
