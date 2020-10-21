@@ -83,7 +83,7 @@ public class NarratorPace : MonoBehaviour
             }
             else
             {
-                Debug.Log("Time has run out!");
+                //Debug.Log("Time has run out!");
 
                 timeRemaining = 0;
                 this.DisplayTime(timeRemaining);
@@ -179,9 +179,7 @@ public class NarratorPace : MonoBehaviour
             case "amount":
                 objectiveCount = Random.Range(2, activities.Count);
                 currentCount = 0;
-                Debug.Log(activities[0].prompt);
                 partialText = activities[0].prompt.Replace("${amount}", "" + objectiveCount) + "( ${currentCount} /" + objectiveCount + ")";
-                Debug.Log(partialText);
                 templateObjective = partialText.Replace("${location}", activities[0].location[0].name);
                 currentObjective.text = templateObjective.Replace("${currentCount}", "" + currentCount);
                 foreach (var item in activities)
@@ -218,7 +216,7 @@ public class NarratorPace : MonoBehaviour
     public void Register(Interactable subscriber)
     {
         interactableRepo.Add(subscriber);
-        Debug.Log("Register by location: " + subscriber.location[0].name + " Type: " + subscriber.type + " Id:" + subscriber.id);
+        //Debug.Log("Register by location: " + subscriber.location[0].name + " Type: " + subscriber.type + " Id:" + subscriber.id);
     }
 
     private void constructReferences(Interactable subscriber)
@@ -238,43 +236,45 @@ public class NarratorPace : MonoBehaviour
         }
 
         //Find if location already exists on Dictionary
-        if (!interactableByLocation.ContainsKey(subscriber.location[0].name))
-        {
-            //Debug.Log("Creating entry for location: " + subscriber.location[0].name);
-            mainLocations.Add(subscriber.location[0]); // TO-DO check for starting location and secondary location (those should be treated as visited)
-            //If it doesnt exist create it
-            var location = new Dictionary<string, List<Interactable>>();
-            //Create list of Interactables
-            var list = new List<Interactable>();
-            // Add current (first to be added)
-            list.Add(subscriber);
-            // Add List with it's location to the new Dictionary Entry
-            //Debug.Log("Creating entry for type: " + subscriber.type);
-            location.Add(subscriber.type, list);
-            interactableByLocation.Add(subscriber.location[0].name, location);
-        }
-        else
-        {
-            //If location already exists fetch it, and add new value
-            Dictionary<string, List<Interactable>> location;
-            interactableByLocation.TryGetValue(subscriber.location[0].name, out location);
-            //Find if type already exsits on sub-Dictionary
-            if (!location.ContainsKey(subscriber.type))
+        if (subscriber.location.Count > 0){
+            if (!interactableByLocation.ContainsKey(subscriber.location[0].name))
             {
-                //Debug.Log("Creating entry for type: " + subscriber.type);
-                //If it doesnt create list
+                //Debug.Log("Creating entry for location: " + subscriber.location[0].name);
+                mainLocations.Add(subscriber.location[0]); // TO-DO check for starting location and secondary location (those should be treated as visited)
+                //If it doesnt exist create it
+                var location = new Dictionary<string, List<Interactable>>();
+                //Create list of Interactables
                 var list = new List<Interactable>();
                 // Add current (first to be added)
                 list.Add(subscriber);
                 // Add List with it's location to the new Dictionary Entry
+                //Debug.Log("Creating entry for type: " + subscriber.type);
                 location.Add(subscriber.type, list);
+                interactableByLocation.Add(subscriber.location[0].name, location);
             }
             else
             {
-                //If it already exists, fetch list and add new subscriber
-                List<Interactable> list;
-                location.TryGetValue(subscriber.type, out list);
-                list.Add(subscriber);
+                //If location already exists fetch it, and add new value
+                Dictionary<string, List<Interactable>> location;
+                interactableByLocation.TryGetValue(subscriber.location[0].name, out location);
+                //Find if type already exsits on sub-Dictionary
+                if (!location.ContainsKey(subscriber.type))
+                {
+                    //Debug.Log("Creating entry for type: " + subscriber.type);
+                    //If it doesnt create list
+                    var list = new List<Interactable>();
+                    // Add current (first to be added)
+                    list.Add(subscriber);
+                    // Add List with it's location to the new Dictionary Entry
+                    location.Add(subscriber.type, list);
+                }
+                else
+                {
+                    //If it already exists, fetch list and add new subscriber
+                    List<Interactable> list;
+                    location.TryGetValue(subscriber.type, out list);
+                    list.Add(subscriber);
+                }
             }
         }
     }
