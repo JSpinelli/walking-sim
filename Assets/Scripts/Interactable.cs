@@ -38,13 +38,13 @@ abstract public class Interactable : MonoBehaviour {
     }
 
     private void OnTriggerEnter (Collider other) {
-        if (isColliding && active) return;
+        if (isColliding || !active) return;
         isColliding = true;
         keyPrompt.SetActive (true);
     }
 
     private void OnTriggerExit (Collider other) {
-        if (!isColliding && active) return;
+        if (!isColliding || !active) return;
         isColliding = false;
         keyPrompt.SetActive (false);
     }

@@ -13,16 +13,20 @@ public class PlayerInteract : MonoBehaviour
         //Ray ray = GetComponent<Camera>().ScreenPointToRay();
         Transform cam = Camera.main.transform;
         Ray ray = new Ray(cam.position, cam.forward);
-
-        if (Physics.Raycast(ray, out hit, interactDistance))
+        RaycastHit[] hits;
+        hits = Physics.RaycastAll(cam.position, cam.forward, interactDistance);
+        //if (Physics.Raycast(ray, out hit, interactDistance))
+        if (hits.Length > 0)
         {
-            Transform objectHit = hit.transform;
-            Interactable interactable = objectHit.GetComponent<Interactable>();
-            if (interactable)
-            {
-                interactable.OnInteract();
-            }
 
+            for (var i = 0; i < hits.Length; i++){
+                Transform objectHit = hits[i].transform;
+                Interactable interactable = objectHit.GetComponent<Interactable>();
+                if (interactable)
+                {
+                    interactable.OnInteract();
+                }
+            }
             // Do something with the object that was hit by the raycast.
         }
     }
