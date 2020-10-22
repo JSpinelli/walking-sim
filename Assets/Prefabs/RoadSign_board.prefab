@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2422653121076734302}
   - component: {fileID: 2422653121076734303}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 2422653121091615321}
   - component: {fileID: 2422653121091615320}
   - component: {fileID: 2422653121091615303}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: RoadSign (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -416,7 +416,7 @@ GameObject:
   - component: {fileID: 2422653121634316938}
   - component: {fileID: 2422653121634316937}
   - component: {fileID: 2422653121634316936}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: RoadSign (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -727,7 +727,7 @@ GameObject:
   - component: {fileID: 2422653122370204141}
   - component: {fileID: 2422653122370204140}
   - component: {fileID: 2422653122370204139}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: RoadSign (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1038,7 +1038,7 @@ GameObject:
   - component: {fileID: 2422653122807582656}
   - component: {fileID: 2422653122807582671}
   - component: {fileID: 2422653122807582670}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: RoadSign_board
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1090,6 +1090,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: a271814e8c7fd3a4091e9635e1f18413, type: 2}
+  - {fileID: 2100000, guid: c57e386c6c6f2f14d8974e72c36efdb6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1154,7 +1155,7 @@ MonoBehaviour:
       m_Rotation: 0
       m_Anchor: 9
     m_Material: {fileID: 0}
-    m_SubmeshIndex: 0
+    m_SubmeshIndex: 1
     m_ManualUV: 0
     elementGroup: -1
     m_TextureGroup: -1
@@ -1171,7 +1172,7 @@ MonoBehaviour:
       m_Rotation: 0
       m_Anchor: 9
     m_Material: {fileID: 0}
-    m_SubmeshIndex: 0
+    m_SubmeshIndex: 1
     m_ManualUV: 0
     elementGroup: -1
     m_TextureGroup: -1
@@ -1188,7 +1189,7 @@ MonoBehaviour:
       m_Rotation: 0
       m_Anchor: 9
     m_Material: {fileID: 0}
-    m_SubmeshIndex: 0
+    m_SubmeshIndex: 1
     m_ManualUV: 0
     elementGroup: -1
     m_TextureGroup: -1
@@ -1205,7 +1206,7 @@ MonoBehaviour:
       m_Rotation: 0
       m_Anchor: 9
     m_Material: {fileID: 0}
-    m_SubmeshIndex: 0
+    m_SubmeshIndex: 1
     m_ManualUV: 0
     elementGroup: -1
     m_TextureGroup: -1
@@ -1222,7 +1223,7 @@ MonoBehaviour:
       m_Rotation: 0
       m_Anchor: 9
     m_Material: {fileID: 0}
-    m_SubmeshIndex: 0
+    m_SubmeshIndex: 1
     m_ManualUV: 0
     elementGroup: -1
     m_TextureGroup: -1
