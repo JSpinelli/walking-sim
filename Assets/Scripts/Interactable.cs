@@ -37,17 +37,19 @@ abstract public class Interactable : MonoBehaviour {
         return; // Could not find a parent with given tag.
     }
 
-    private void OnTriggerEnter (Collider other) {
+    public void ShowPrompt () {
         if (isColliding || !active) return;
         isColliding = true;
         keyPrompt.SetActive (true);
     }
 
-    private void OnTriggerExit (Collider other) {
+    public void HidePrompt () {
         if (!isColliding || !active) return;
         isColliding = false;
         keyPrompt.SetActive (false);
     }
 
     public abstract void OnInteract ();
+    public abstract void OnActivate ();
+    public abstract void OnDeactivate ();
 }

@@ -8,10 +8,22 @@ public class DeliveryPointInteractable : Interactable
     public GameObject objectToModify;
     public override void OnInteract()
     {
-        if (!activated)
+        if (!activated && active)
         {
             objectToModify.SetActive(true);
             narrator.notifyComplete(this);
+            activated = true;
         }
+    }
+
+    public override void OnActivate()
+    {
+        active = true;
+        objectToModify.SetActive(false);
+    }
+    public override void OnDeactivate()
+    {
+        active = false;
+        objectToModify.SetActive(true);
     }
 }

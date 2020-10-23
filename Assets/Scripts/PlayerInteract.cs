@@ -6,10 +6,10 @@ using UnityEngine.InputSystem;
 public class PlayerInteract : MonoBehaviour
 {
     public float interactDistance;
+    public BoxCollider promptCollider;
 
     public void OnInteract(InputAction.CallbackContext ctx)
     {
-        RaycastHit hit;
         //Ray ray = GetComponent<Camera>().ScreenPointToRay();
         Transform cam = Camera.main.transform;
         Ray ray = new Ray(cam.position, cam.forward);
@@ -19,7 +19,8 @@ public class PlayerInteract : MonoBehaviour
         if (hits.Length > 0)
         {
 
-            for (var i = 0; i < hits.Length; i++){
+            for (var i = 0; i < hits.Length; i++)
+            {
                 Transform objectHit = hits[i].transform;
                 Interactable interactable = objectHit.GetComponent<Interactable>();
                 if (interactable)
@@ -28,6 +29,25 @@ public class PlayerInteract : MonoBehaviour
                 }
             }
             // Do something with the object that was hit by the raycast.
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Interactable interactable = other.gameObject.GetComponent<Interactable>();
+        if (interactable)
+        {
+            interactable.ShowPrompt();
+        }
+
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        Interactable interactable = other.gameObject.GetComponent<Interactable>();
+        if (interactable)
+        {
+            interactable.HidePrompt();
         }
     }
 }

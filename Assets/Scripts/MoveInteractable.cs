@@ -20,6 +20,12 @@ public class MoveInteractable : Interactable
                 activated = false;
             }
         }
+    }
+
+    public override void OnActivate(){
+
+    }
+    public override void OnDeactivate(){
 
     }
 }

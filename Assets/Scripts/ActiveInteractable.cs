@@ -15,8 +15,20 @@ public class ActiveInteractable : Interactable
             {
                 objectToModify.SetActive(setActive);
                 wasActivated = true;
+                active = false;
+                keyPrompt.SetActive (false);
                 narrator.notifyComplete(this);
             }
         }
+    }
+
+    
+    public override void OnActivate()
+    {
+        active = true;
+    }
+    public override void OnDeactivate()
+    {
+        active = false;
     }
 }
