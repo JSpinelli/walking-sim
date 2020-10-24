@@ -590,9 +590,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   promptCollider: {fileID: 8721654870591142022}
   keyPrompt: {fileID: 5442126514006864523}
+  id: 0
+  location: []
+  type: activable
+  prompt: Fill ${amount} glasses with water in ${location}
+  category: amount
+  subscribe: 0
+  active: 0
   Pivot: {fileID: 1483390153911078360}
   isReseatable: 1
-  activated: 0
 --- !u!65 &8721654870591142022
 BoxCollider:
   m_ObjectHideFlags: 0

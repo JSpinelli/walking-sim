@@ -33,8 +33,11 @@ public class NarratorPace : MonoBehaviour
     private List<Interactable> interactablesActive = new List<Interactable>();
 
     private bool itemPickedUp = false;
+    private bool firstObjective = true;
 
     private Interactable deliveryPoint;
+
+    public Interactable firstInteraction;
 
     private int taskCompletedCounter = 0;
     private int taskFailedCounter = 0;
@@ -44,7 +47,8 @@ public class NarratorPace : MonoBehaviour
     private int incompleteTaskDialogCounter = 0;
     private string[] fillerDialog = {
         "Do you know how depressing it is to be a know-all narrator all the time? I even rearrange the task from time to time to change things up",
-        "Surprise! It's another task!"
+        "Surprise! It's another task!",
+        ""
     };
     private string[] completeTaskDialog = {
         "Hi, welcome to me, welcome to an office game. Let me give you another task",
@@ -55,6 +59,8 @@ public class NarratorPace : MonoBehaviour
     };
 
     private string[] incompleteTaskDialog = {
+        "Come on, this are not difficult tasks",
+        "Are you lost? It is a very simple layout",
         "Ohhh, a defiant player. You know that this was also expected right? Here, we can try again",
         "I can literally keep giving you tasks all day",
         "Watch out! Another task is coming your way",
@@ -67,16 +73,13 @@ public class NarratorPace : MonoBehaviour
         {
             this.constructReferences(interactableRepo[i]);
         }
-        // Dictionary<string, List<Interactable>> typeIterator;
-        // List<Interactable> activityIterator;
-
+        foreach (TaskType item in taskTypes)
+        {
+            Debug.Log("Types: " + item.name);
+        }
         objectivesUI.SetActive(true);
-        // Debug.Log(interactableRepo.Count);
-        // interactableByLocation.TryGetValue("Office B", out typeIterator);
-        // typeIterator.TryGetValue("glass", out activityIterator);
-        // this.makeObjective(activityIterator);
-
-        this.findObjective();
+        currentObjective.text = "Sign paper";
+        firstInteraction.OnActivate();
     }
 
     // Update is called once per frame
@@ -125,9 +128,16 @@ public class NarratorPace : MonoBehaviour
             newLocation = mainLocations[Random.Range(0, mainLocations.Count)];
             interactableByLocation.TryGetValue(newLocation.name, out typeIterator);
         }
+        Debug.Log("Next Objective in: " + newLocation.name);
         var taskTypesNotPerfomed = taskTypes.FindAll(x => !x.performed);
         var i = 0;
         List<int> availableTaskIndexs = new List<int>();
+        if (!typeIterator.GetEnumerator().MoveNext()){
+            Debug.Log("WE DONT HAVE NO MORE ACTIVITIES HERE");
+            interactableByLocation.Remove(newLocation.name);
+            this.findObjective();
+            return;
+        }
         while (i < taskTypesNotPerfomed.Count && typeIterator.ContainsKey(taskTypesNotPerfomed[i].name))
         {
             availableTaskIndexs.Add(i);
@@ -137,6 +147,7 @@ public class NarratorPace : MonoBehaviour
         {
             var index = availableTaskIndexs[Random.Range(0, availableTaskIndexs.Count)];
             taskTypesNotPerfomed[index].performed = true;
+            Debug.Log("Next type was not perfomed: " + taskTypesNotPerfomed[index].name);
             typeIterator.TryGetValue(taskTypesNotPerfomed[index].name, out activityIterator);
             typeIterator.Remove(taskTypesNotPerfomed[index].name);
         }
@@ -144,14 +155,22 @@ public class NarratorPace : MonoBehaviour
         {
             availableTaskIndexs = new List<int>();
             var j = 0;
-            while (j < taskTypes.Count && typeIterator.ContainsKey(taskTypes[i].name))
+            while (j < taskTypes.Count && typeIterator.ContainsKey(taskTypes[j].name))
             {
                 availableTaskIndexs.Add(j);
                 j++;
             }
-            var index = availableTaskIndexs[Random.Range(0, availableTaskIndexs.Count)];
-            typeIterator.TryGetValue(taskTypes[index].name, out activityIterator);
-            typeIterator.Remove(taskTypes[index].name);
+            Debug.Log("Available tasks " + availableTaskIndexs.Count);
+            if (availableTaskIndexs.Count > 0)
+            {
+                var index = availableTaskIndexs[Random.Range(0, availableTaskIndexs.Count)];
+                typeIterator.TryGetValue(taskTypes[index].name, out activityIterator);
+                typeIterator.Remove(taskTypes[index].name);
+            }else{
+                interactableByLocation.Remove(newLocation.name);
+                this.findObjective();
+                return;
+            }
         }
         Debug.Log(activityIterator[0].type + " " + activityIterator[0].category + " " + activityIterator[0].location[0].name);
         this.makeObjective(activityIterator);
@@ -214,16 +233,19 @@ public class NarratorPace : MonoBehaviour
                 string locationA = "";
                 foreach (Location location in pickUp.location)
                 {
+                    Debug.Log(location.name);
                     locationA = locationA + " " + location.name;
                 }
                 templateObjective = pickUp.prompt.Replace("${locationA}", locationA);
 
                 int dropOffIndex = Random.Range(0, dropOffs.Count);
                 deliveryPoint = dropOffs[dropOffIndex];
+                Debug.Log("Dropoff name: " + deliveryPoint.name + " first location: " + deliveryPoint.location[0].name);
                 dropOffs.RemoveAt(dropOffIndex);
                 string locationB = "";
                 foreach (Location location in deliveryPoint.location)
                 {
+                    Debug.Log(location.name);
                     locationB = locationB + " " + location.name;
                 }
                 templateObjective2 = "Deliver the binder to " + locationB;
@@ -236,6 +258,7 @@ public class NarratorPace : MonoBehaviour
                 string locationName = "";
                 foreach (Location location in objective.location)
                 {
+                    Debug.Log(location.name);
                     locationName = locationName + " " + location.name;
                 }
                 templateObjective = objective.prompt.Replace("${location}", locationName);
