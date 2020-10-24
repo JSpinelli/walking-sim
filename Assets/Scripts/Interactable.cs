@@ -4,7 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-abstract public class Interactable : MonoBehaviour {
+abstract public class Interactable : MonoBehaviour
+{
     public BoxCollider promptCollider;
     public GameObject keyPrompt;
 
@@ -12,44 +13,57 @@ abstract public class Interactable : MonoBehaviour {
     protected bool wasActivated = false;
 
     public int id;
-    public List<Location> location = new List<Location> ();
+    public List<Location> location = new List<Location>();
     public string type = "activable";
     public string prompt = "Fill ${amount} glasses with water in ${location}";
     public string category = "amount";
+
+    public bool subscribe = true;
 
     public bool active = false;
 
     protected NarratorPace narrator;
 
-    private void Awake () {
-        Transform t = this.transform;
-        while (t.parent != null) {
-            //Debug.Log(t.parent);
-            if (t.parent.tag == "Location") {
+    private void Awake()
+    {
+        if (subscribe)
+        {
+            Transform t = this.transform;
+            while (t.parent != null)
+            {
+                //Debug.Log(t.parent);
+                if (t.parent.tag == "Location")
+                {
 
-                location.Insert (0, t.parent.GetComponent<Location> ());
+                    location.Insert(0, t.parent.GetComponent<Location>());
+                }
+                t = t.parent.transform;
             }
-            t = t.parent.transform;
+            if (location.Count > 0)
+            {
+                narrator = GameObject.Find("Narrator").GetComponent<NarratorPace>();
+                id = this.GetInstanceID();
+                narrator.Register(this);
+            }
+            return;
         }
-        narrator = GameObject.Find ("Narrator").GetComponent<NarratorPace> ();
-        id = this.GetInstanceID ();
-        narrator.Register (this);
-        return; // Could not find a parent with given tag.
     }
 
-    public void ShowPrompt () {
+    public void ShowPrompt()
+    {
         if (isColliding || !active) return;
         isColliding = true;
-        keyPrompt.SetActive (true);
+        keyPrompt.SetActive(true);
     }
 
-    public void HidePrompt () {
+    public void HidePrompt()
+    {
         if (!isColliding || !active) return;
         isColliding = false;
-        keyPrompt.SetActive (false);
+        keyPrompt.SetActive(false);
     }
 
-    public abstract void OnInteract ();
-    public abstract void OnActivate ();
-    public abstract void OnDeactivate ();
+    public abstract void OnInteract();
+    public abstract void OnActivate();
+    public abstract void OnDeactivate();
 }
