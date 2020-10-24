@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5861965659741577277}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PPT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23,7 +23,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1006791457880402050}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.42383194, y: 2.9742162, z: 2.1510792}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 7086802586471710128}
   - component: {fileID: 7086802586471710135}
   - component: {fileID: 7086802586471710134}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PPT_Scoll
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 8e8426062371ad648950b783e61523f0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -673,7 +673,7 @@ GameObject:
   - component: {fileID: 7086802587829641605}
   - component: {fileID: 7086802587829641604}
   - component: {fileID: 7086802587829641851}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PPT_BG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
