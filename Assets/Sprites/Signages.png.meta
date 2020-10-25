@@ -1,0 +1,1229 @@
+fileFormatVersion: 2
+guid: 34a573a47ba64ba49b582529dc8c1562
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4563521142584661509
+    second: CFO
+  - first:
+      213: -3998846542314525289
+    second: Secondary Meeting Room
+  - first:
+      213: 3099197691048010979
+    second: MR_A
+  - first:
+      213: -96226922550985031
+    second: SMR_A
+  - first:
+      213: 1581493243879024005
+    second: CFM
+  - first:
+      213: 5659990385679137565
+    second: No
+  - first:
+      213: -5755517255944865464
+    second: MR_B
+  - first:
+      213: -6084326561154443194
+    second: Signages_7
+  - first:
+      213: -5846425051049042970
+    second: FC
+  - first:
+      213: -4852195868795104913
+    second: Signages_9
+  - first:
+      213: 8985779387014977312
+    second: MR_C
+  - first:
+      213: 6935161692588481725
+    second: Signages_11
+  - first:
+      213: 2098858788527167028
+    second: CTO
+  - first:
+      213: 8386237457588621905
+    second: Lounge
+  - first:
+      213: 93354688518945135
+    second: MR_D
+  - first:
+      213: -7663926101748156249
+    second: ConferenceHall
+  - first:
+      213: -4156085602258753200
+    second: CMO
+  - first:
+      213: 7808143160082876298
+    second: Main Meeting Room
+  - first:
+      213: -4346903998761687684
+    second: MR_E
+  - first:
+      213: 28108355726044536
+    second: no
+  - first:
+      213: -5648529059269854224
+    second: Signages_20
+  - first:
+      213: -3113944054629503520
+    second: Signages_21
+  - first:
+      213: 8868818898404051457
+    second: Signages_22
+  - first:
+      213: -6365464828482783062
+    second: Signages_23
+  - first:
+      213: 378953769315905942
+    second: Signages_24
+  - first:
+      213: -3034927720047872766
+    second: Signages_25
+  - first:
+      213: -3541555707155335897
+    second: Signages_26
+  - first:
+      213: 2239980369413878487
+    second: Signages_27
+  - first:
+      213: 4670260838074478131
+    second: Signages_28
+  - first:
+      213: 5072979621792695087
+    second: Signages_29
+  - first:
+      213: 9164844907836115893
+    second: Signages_30
+  - first:
+      213: -8654228123070626154
+    second: Signages_31
+  - first:
+      213: -4373241627667763820
+    second: Signages_32
+  - first:
+      213: -2804946185010046563
+    second: Signages_33
+  - first:
+      213: -1211682361155608791
+    second: Signages_34
+  - first:
+      213: -7794649632178430276
+    second: Signages_35
+  - first:
+      213: -7821541748073223062
+    second: Signages_36
+  - first:
+      213: -2403455961648509762
+    second: Signages_37
+  - first:
+      213: -1393636959035260551
+    second: Signages_38
+  - first:
+      213: -638947767907044693
+    second: Signages_39
+  - first:
+      213: -2924805757365963519
+    second: Signages_40
+  - first:
+      213: 740418755228001134
+    second: Signages_41
+  - first:
+      213: -4669712728550561879
+    second: Signages_42
+  - first:
+      213: 5090960845230830595
+    second: Signages_43
+  - first:
+      213: 7936882857316683640
+    second: Signages_44
+  - first:
+      213: 8194019914143564373
+    second: Signages_45
+  - first:
+      213: -510389034190599193
+    second: Signages_46
+  - first:
+      213: 659944239820768199
+    second: Signages_47
+  - first:
+      213: -8657816617960282378
+    second: Signages_48
+  - first:
+      213: 1067886088980638611
+    second: Signages_49
+  - first:
+      213: -1052138497075704367
+    second: Signages_50
+  - first:
+      213: -4802037691695033711
+    second: Signages_51
+  - first:
+      213: 6840866714269661579
+    second: Signages_52
+  - first:
+      213: 485013902607668875
+    second: Signages_53
+  - first:
+      213: -8218343665735488875
+    second: Signages_54
+  - first:
+      213: -2369863594173632657
+    second: Signages_55
+  - first:
+      213: -323940357340056404
+    second: Signages_56
+  - first:
+      213: -3499729955930854502
+    second: Signages_57
+  - first:
+      213: -176360878958331395
+    second: Signages_58
+  - first:
+      213: -6713815942181016140
+    second: Signages_59
+  - first:
+      213: -1546243340615910313
+    second: Signages_60
+  - first:
+      213: 5767029110403506691
+    second: Signages_61
+  - first:
+      213: 8811406742097188872
+    second: Signages_62
+  - first:
+      213: 4713753215204536604
+    second: Signages_63
+  - first:
+      213: -2495113931589406671
+    second: Signages_64
+  - first:
+      213: -3216833115831986166
+    second: Signages_65
+  - first:
+      213: -4231457206733671661
+    second: Signages_66
+  - first:
+      213: -8111276899469975706
+    second: Signages_67
+  - first:
+      213: 7447678076363121814
+    second: Signages_68
+  - first:
+      213: 888993971615991963
+    second: Signages_69
+  - first:
+      213: 2325029926831370097
+    second: Signages_70
+  - first:
+      213: 5597199399256465092
+    second: Signages_71
+  - first:
+      213: 7010910101872187127
+    second: Signages_72
+  - first:
+      213: 2727165392027825401
+    second: Signages_73
+  - first:
+      213: -6453402110720357287
+    second: Signages_74
+  - first:
+      213: -8086604501475660492
+    second: Signages_75
+  - first:
+      213: -4978540962909563875
+    second: Signages_76
+  - first:
+      213: 7871199794645403820
+    second: Signages_77
+  - first:
+      213: -5466453394742311645
+    second: Signages_78
+  - first:
+      213: -6310041090730952443
+    second: Signages_79
+  - first:
+      213: 5060792881903707110
+    second: Signages_80
+  - first:
+      213: 5470943668682030093
+    second: Signages_81
+  - first:
+      213: 5641777814841965763
+    second: Signages_82
+  - first:
+      213: 6633911269590331454
+    second: Signages_83
+  - first:
+      213: -6178611405903210123
+    second: Signages_84
+  - first:
+      213: 1781454008393504585
+    second: Signages_85
+  - first:
+      213: 5193479096000927751
+    second: Signages_86
+  - first:
+      213: -5698872207357330515
+    second: Signages_87
+  - first:
+      213: -7257327757977286249
+    second: Signages_88
+  - first:
+      213: -3614973926376283067
+    second: Signages_89
+  - first:
+      213: 7064787301833844486
+    second: Signages_90
+  - first:
+      213: -2768431970679508689
+    second: Signages_91
+  - first:
+      213: 2038271447680256087
+    second: Signages_92
+  - first:
+      213: 573358077368365999
+    second: Signages_93
+  - first:
+      213: -2788389706256623579
+    second: Signages_94
+  - first:
+      213: -6428140613197135583
+    second: Signages_95
+  - first:
+      213: 8601918777920655688
+    second: Signages_96
+  - first:
+      213: -3342166449048545168
+    second: Signages_97
+  - first:
+      213: -4579677057765825437
+    second: Signages_98
+  - first:
+      213: 1782157771088495276
+    second: Signages_99
+  - first:
+      213: -9044535059867550511
+    second: Signages_100
+  - first:
+      213: 7617730530694214481
+    second: Signages_101
+  - first:
+      213: -9184273539909160581
+    second: Signages_102
+  - first:
+      213: -6358361092979163716
+    second: Signages_103
+  - first:
+      213: -6589409364035892714
+    second: Signages_104
+  - first:
+      213: -3413779819082990522
+    second: Signages_105
+  - first:
+      213: 5827562251994904214
+    second: Signages_106
+  - first:
+      213: 8262424429661463673
+    second: Signages_107
+  - first:
+      213: 4544372491748619165
+    second: Signages_108
+  - first:
+      213: -5297400050253796186
+    second: Signages_109
+  - first:
+      213: -7507477570815942935
+    second: Signages_110
+  - first:
+      213: -2937785287014959904
+    second: Signages_111
+  - first:
+      213: 9193907885953698661
+    second: Signages_112
+  - first:
+      213: 3727509156245767454
+    second: Signages_113
+  - first:
+      213: -988401042669640951
+    second: Signages_114
+  - first:
+      213: -1316935222143576755
+    second: Signages_115
+  - first:
+      213: -8246074635502537673
+    second: Signages_116
+  - first:
+      213: -5532513984521632470
+    second: Signages_117
+  - first:
+      213: -8957587142809341745
+    second: Signages_118
+  - first:
+      213: -977416355048627805
+    second: Signages_119
+  - first:
+      213: -7371896339416797815
+    second: Signages_120
+  - first:
+      213: 8528262668281951608
+    second: Signages_121
+  - first:
+      213: 3011698457511338183
+    second: Signages_122
+  - first:
+      213: -1926508450294668930
+    second: Signages_123
+  - first:
+      213: -2141564189122649296
+    second: Signages_124
+  - first:
+      213: -2966215895406601169
+    second: Signages_125
+  - first:
+      213: 6617446184509329200
+    second: Signages_126
+  - first:
+      213: 6784214962433316445
+    second: Signages_127
+  - first:
+      213: -963266147218593184
+    second: Signages_128
+  - first:
+      213: 6343700600655838334
+    second: Signages_129
+  - first:
+      213: -5110462732659612866
+    second: Signages_130
+  - first:
+      213: -855690660330224323
+    second: Signages_131
+  - first:
+      213: 7164823544536278797
+    second: Signages_132
+  - first:
+      213: 5300111294042993050
+    second: Signages_133
+  - first:
+      213: -8260893651402369447
+    second: Signages_134
+  - first:
+      213: -6591449860843196396
+    second: Signages_135
+  - first:
+      213: -5800726339491091321
+    second: Signages_136
+  - first:
+      213: 2567483554584351365
+    second: Signages_137
+  - first:
+      213: 1656475932326584211
+    second: Signages_138
+  - first:
+      213: -1338664301252084153
+    second: Signages_139
+  - first:
+      213: 2594601754723639091
+    second: Signages_140
+  - first:
+      213: -6642225250214695076
+    second: Signages_141
+  - first:
+      213: -3214887993603005189
+    second: Signages_142
+  - first:
+      213: 5021534132679697153
+    second: Signages_143
+  - first:
+      213: 80338492607080184
+    second: Signages_144
+  - first:
+      213: 5544137259445531025
+    second: Signages_145
+  - first:
+      213: -6248924724061917965
+    second: Signages_146
+  - first:
+      213: 5342775277788721728
+    second: Signages_147
+  - first:
+      213: 6848118957967470514
+    second: Signages_148
+  - first:
+      213: -2807104085523687320
+    second: Signages_149
+  - first:
+      213: -5872041537959990969
+    second: Signages_150
+  - first:
+      213: -8642540990751412183
+    second: Signages_151
+  - first:
+      213: 3358140141543229491
+    second: Signages_152
+  - first:
+      213: -3247239992524163101
+    second: Signages_153
+  - first:
+      213: 4244223307684493430
+    second: Signages_154
+  - first:
+      213: -9013552298942457423
+    second: Signages_155
+  - first:
+      213: 6215670758187952761
+    second: Signages_156
+  - first:
+      213: 4570315774288026921
+    second: Signages_157
+  - first:
+      213: 5798291486682092798
+    second: Signages_158
+  - first:
+      213: 2225737064099411414
+    second: Signages_159
+  - first:
+      213: 7267657638671743402
+    second: Signages_160
+  - first:
+      213: 6322092678585396726
+    second: Signages_161
+  - first:
+      213: 7372693246412241718
+    second: Signages_162
+  - first:
+      213: -3834825447349974043
+    second: Signages_163
+  - first:
+      213: -8794074555291477699
+    second: Signages_164
+  - first:
+      213: 50428674998913631
+    second: Signages_165
+  - first:
+      213: 6365830020423298526
+    second: Signages_166
+  - first:
+      213: 6664225128755848853
+    second: Signages_167
+  - first:
+      213: -6656354292627977092
+    second: Signages_168
+  - first:
+      213: 4390392127320460592
+    second: Signages_169
+  - first:
+      213: 8928460651145945248
+    second: Signages_170
+  - first:
+      213: 6367823674650334663
+    second: Signages_171
+  - first:
+      213: 3195096916381381148
+    second: Signages_172
+  - first:
+      213: -7665420361038964433
+    second: Signages_173
+  - first:
+      213: -6006855405060518642
+    second: Signages_174
+  - first:
+      213: 3915748948875854894
+    second: Signages_175
+  - first:
+      213: 4612541508758498755
+    second: Signages_176
+  - first:
+      213: 5225763409500353661
+    second: Signages_177
+  - first:
+      213: -4134187190297758526
+    second: Signages_178
+  - first:
+      213: -4241161516277177189
+    second: Signages_179
+  - first:
+      213: 3908338978820033266
+    second: Signages_180
+  - first:
+      213: -2697621476307418323
+    second: Signages_181
+  - first:
+      213: -6788520313171752849
+    second: Signages_182
+  - first:
+      213: -4214299700429386843
+    second: Signages_183
+  - first:
+      213: -142881876297916853
+    second: Signages_184
+  - first:
+      213: 870942558777262320
+    second: Signages_185
+  - first:
+      213: 7586726218657519984
+    second: Signages_186
+  - first:
+      213: -7611965705150698802
+    second: Signages_187
+  - first:
+      213: -4073531693800150936
+    second: Signages_188
+  - first:
+      213: 5228089128914773532
+    second: Signages_189
+  - first:
+      213: 8861514590015280854
+    second: Signages_190
+  - first:
+      213: 406803401652097962
+    second: Signages_191
+  - first:
+      213: -4539929438201741805
+    second: Signages_192
+  - first:
+      213: -7795269844937392464
+    second: Signages_193
+  - first:
+      213: 6567359967090460437
+    second: Signages_194
+  - first:
+      213: 8191183552172942964
+    second: Signages_195
+  - first:
+      213: 4702422498881884830
+    second: Signages_196
+  - first:
+      213: -5379183691218065354
+    second: Signages_197
+  - first:
+      213: 4506882717671797516
+    second: Signages_198
+  - first:
+      213: -2581677087259192772
+    second: Signages_199
+  - first:
+      213: -6185482487338364521
+    second: Signages_200
+  - first:
+      213: -5453288382302509491
+    second: Signages_201
+  - first:
+      213: -7239720830007551858
+    second: Signages_202
+  - first:
+      213: -2079487232546500475
+    second: Signages_203
+  - first:
+      213: 593325557761730077
+    second: Signages_204
+  - first:
+      213: 3503846387421643181
+    second: Signages_205
+  - first:
+      213: -5414405500913292416
+    second: Signages_206
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: 1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CFO
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1001
+        width: 284
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf9a14b03bd1ba0c0800000000000000
+      internalID: -4563521142584661509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Secondary Meeting Room
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 1003
+        width: 283
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79d2b0ea14e3188c0800000000000000
+      internalID: -3998846542314525289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MR_A
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 1006
+        width: 294
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e4a0a731ef820b20800000000000000
+      internalID: 3099197691048010979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SMR_A
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 1005
+        width: 296
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bef48faf122aaef0800000000000000
+      internalID: -96226922550985031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CFM
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 900
+        width: 282
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 585e618e9b792f510800000000000000
+      internalID: 1581493243879024005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 904
+        width: 284
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1bf78294435c8e40800000000000000
+      internalID: 5659990385679137565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MR_B
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 899
+        width: 294
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84976ccbc8b4020b0800000000000000
+      internalID: -5755517255944865464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Signages_7
+      rect:
+        serializedVersion: 2
+        x: 1003
+        y: 901
+        width: 296
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6485ae09a31209ba0800000000000000
+      internalID: -6084326561154443194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FC
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 798
+        width: 283
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ebd64a44635ddea0800000000000000
+      internalID: -5846425051049042970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Signages_9
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 799
+        width: 283
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6199dbb09989acb0800000000000000
+      internalID: -4852195868795104913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MR_C
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 793
+        width: 293
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0271e096eb6e3bc70800000000000000
+      internalID: 8985779387014977312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Signages_11
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 793
+        width: 295
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbc12aab0d4ae3060800000000000000
+      internalID: 6935161692588481725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CTO
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 690
+        width: 283
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4365edba2f4a02d10800000000000000
+      internalID: 2098858788527167028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lounge
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 692
+        width: 282
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15215a51986e16470800000000000000
+      internalID: 8386237457588621905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MR_D
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 683
+        width: 296
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f69f9473899ab4100800000000000000
+      internalID: 93354688518945135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConferenceHall
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 683
+        width: 296
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a8f470d0d344a590800000000000000
+      internalID: -7663926101748156249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CMO
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 581
+        width: 282
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05960452a2e9256c0800000000000000
+      internalID: -4156085602258753200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Meeting Room
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 585
+        width: 283
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a87c224b5d81c5c60800000000000000
+      internalID: 7808143160082876298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MR_E
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 567
+        width: 295
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c75a51118d1bca3c0800000000000000
+      internalID: -4346903998761687684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: no
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 461
+        width: 284
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87d654e866cd36000800000000000000
+      internalID: 28108355726044536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Signages_20
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 463
+        width: 283
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fbbfbe6fb46c91b0800000000000000
+      internalID: -5648529059269854224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Signages_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 347
+        width: 282
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ed6e55716c09c4d0800000000000000
+      internalID: -3113944054629503520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Signages_22
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 351
+        width: 284
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10a05a09ccf541b70800000000000000
+      internalID: 8868818898404051457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Signages_23
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 517
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa87a04d67359a7a0800000000000000
+      internalID: -6365464828482783062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
