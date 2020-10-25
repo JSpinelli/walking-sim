@@ -41,7 +41,7 @@ abstract public class Interactable : MonoBehaviour
             }
             if (location.Count > 0)
             {
-                narrator = GameObject.Find("Narrator").GetComponent<NarratorPace>();
+                narrator = GameObject.Find("NarratorObject").GetComponent<NarratorPace>();
                 id = this.GetInstanceID();
                 narrator.Register(this);
             }

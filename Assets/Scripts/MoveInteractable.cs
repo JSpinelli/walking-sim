@@ -5,18 +5,18 @@ using UnityEngine;
 public class MoveInteractable : Interactable
 {
     public GameObject Pivot;
+    public GameObject objectToMove;
     public bool isReseatable;
     private bool activated = false;
     public override void OnInteract()
     {
         if (!activated)
         {
-            gameObject.transform.RotateAround(Pivot.transform.position, Vector3.up, 90);
+            objectToMove.transform.RotateAround(Pivot.transform.position, Vector3.up, 90);
             activated = true;
-            Debug.Log("open");
         }else{
             if (isReseatable){
-                gameObject.transform.RotateAround(Pivot.transform.position, Vector3.up, -90);
+                objectToMove.transform.RotateAround(Pivot.transform.position, Vector3.up, -90);
                 activated = false;
             }
         }
