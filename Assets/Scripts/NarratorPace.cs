@@ -52,9 +52,9 @@ public class NarratorPace : MonoBehaviour
         "Great job! You clearly know what this is about. Here have another one",
         "Good job, It seems I have a good player this time",
         "Surprise! It's another task!",
-        "Do you know how depressing it is to be a know-all narrator all the time?",
+        "Did you wonder why they added office chatter as background and no NPCs? I think they were lazy",
         "I'm not gonna lie, I rearrange the tasks everytime someone new arrives otherwise I would have stop doing this ages ago",
-        "You are getting good at clicking buttons",
+        "You are getting good at clicking buttons, maybe too good",
         "Weird how you are the only person on the office right?",
         "Maybe there isn't anyone because adding npcs would be too much?",
         "Clearly they spent all the time in me, the star of the game",
@@ -310,7 +310,8 @@ public class NarratorPace : MonoBehaviour
                 }
                 templateObjective = pickUp.prompt.Replace("${locationA}", locationA);
 
-                int dropOffIndex = Random.Range(0, dropOffs.Count - 1);
+                int dropOffIndex = Random.Range(0, (dropOffs.Count - 1));
+                Debug.Log(dropOffIndex);
                 deliveryPoint = dropOffs[dropOffIndex];
                 Debug.Log("Dropoff name: " + deliveryPoint.name + " first location: " + deliveryPoint.location[0].name);
                 dropOffs.RemoveAt(dropOffIndex);

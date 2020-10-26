@@ -17,6 +17,7 @@ abstract public class Interactable : MonoBehaviour
     public string type = "activable";
     public string prompt = "Fill ${amount} glasses with water in ${location}";
     public string category = "amount";
+    public AudioSource audioSource;
 
     public bool subscribe = true;
 

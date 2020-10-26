@@ -10,9 +10,14 @@ public class DeliveryPointInteractable : Interactable
     {
         if (!activated && active)
         {
+            if (audioSource){
+                audioSource.Play();
+            }
+            keyPrompt.SetActive (false);
             objectToModify.SetActive(true);
             narrator.notifyComplete(this);
             activated = true;
+            active = false;
         }
     }
 

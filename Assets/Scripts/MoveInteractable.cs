@@ -10,12 +10,19 @@ public class MoveInteractable : Interactable
     private bool activated = false;
     public override void OnInteract()
     {
+
         if (!activated)
         {
             objectToMove.transform.RotateAround(Pivot.transform.position, Vector3.up, 90);
             activated = true;
+            if (audioSource){
+                    audioSource.Play();
+            }
         }else{
             if (isReseatable){
+                if (audioSource){
+                    audioSource.Play();
+                }
                 objectToMove.transform.RotateAround(Pivot.transform.position, Vector3.up, -90);
                 activated = false;
             }
