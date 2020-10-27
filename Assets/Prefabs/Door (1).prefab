@@ -1437,6 +1437,7 @@ MonoBehaviour:
   active: 1
   Pivot: {fileID: 1483390153911078360}
   objectToMove: {fileID: 1338104485196920300}
+  collider: {fileID: 5225182027773119553}
   isReseatable: 1
 --- !u!65 &8721654870591142022
 BoxCollider:

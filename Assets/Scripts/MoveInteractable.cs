@@ -6,6 +6,7 @@ public class MoveInteractable : Interactable
 {
     public GameObject Pivot;
     public GameObject objectToMove;
+    public Collider collider;
     public bool isReseatable;
     private bool activated = false;
     public override void OnInteract()
@@ -13,6 +14,7 @@ public class MoveInteractable : Interactable
 
         if (!activated)
         {
+            collider.enabled = false;
             objectToMove.transform.RotateAround(Pivot.transform.position, Vector3.up, 90);
             activated = true;
             if (audioSource){
@@ -24,6 +26,7 @@ public class MoveInteractable : Interactable
                     audioSource.Play();
                 }
                 objectToMove.transform.RotateAround(Pivot.transform.position, Vector3.up, -90);
+                collider.enabled = true;
                 activated = false;
             }
         }

@@ -31,7 +31,6 @@ public class ActiveInteractable : Interactable
         active = true;
         wasActivated = false;
         objectToModify.SetActive(!setActive);
-        keyPrompt.SetActive (true);
     }
     public override void OnDeactivate()
     {
